@@ -216,7 +216,7 @@ class AutoConfig(object):
 
         # search the parent
         parent = os.path.dirname(path)
-        if parent and parent != os.path.abspath(os.sep):
+        if parent and parent != os.path.dirname(parent):
             return self._find_file(parent)
 
         # reached root without finding any files.
